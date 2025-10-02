@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Painel de Gestão Agrícola</title>
+</head>
+
+<body>
+  <header>
+      <div>
+        <a href="index.html">
+          <img src="./img/logo.png" alt="logo" id="logo">
+        </a>
+      </div>
+
+        <div>
+          <a href="atendimento.html" class="servico cta-button">
+            <h3>Serviços</h3>
+          </a>
+        </div>
+        <div>
+          <a href="historia.html" class="historia cta-button">
+            <h3>Sobre Nós</h3>
+          </a>
+        </div>
+  </header>
+  <div>
+    <h1 class="gestao">Painel de Gestão Agrícola</h1>
+  </div>
+  <div class="container">
+    <div class="card">
+      <h2>Plantio</h2>
+      <label>Variedade</label>
+      <input id="variedade" type="text" value="Laranja Pêra">
+      <div class="col">
+        <label>Quantidade</label>
+        <input id="quantidade" type="number" min="1" value="1">
+      </div>
+      <div class="col">
+        <label>Data</label>
+        <input id="dataPlantio" type="date">
+      </div>
+
+      <label>Local</label>
+      <input id="localPlantio" type="text" value="Setor A">
+      <button class="btn btn-primary" id="btnRegistrarPlantio">Registrar</button>
+      <p class="small">Último código: <strong id="lastCode">0000</strong></p>
+      <table id="tabelaPlantios">
+        <thead>
+          <tr>
+            <th>Cód</th>
+            <th>Variedade</th>
+            <th>Qtd</th>
+            <th>Data</th>
+            <th>Local</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+
+    <div class="card">
+      <h2>Irrigação</h2>
+      <label>Setor</label>
+      <input id="setorIrr" type="text" value="Setor A">
+      <div class="row">
+        <div class="col">
+          <label>Data</label>
+          <input id="dataIrr" type="date">
+        </div>
+        <div class="col">
+          <label>Hora</label>
+          <input id="horaIrr" type="time">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <label>Duração (min)</label>
+          <input id="duracaoIrr" type="number" value="30">
+        </div>
+        <div class="col">
+          <label>Volume (L)</label>
+          <input id="volumeIrr" type="number">
+        </div>
+      </div>
+      <label>Automático</label>
+      <select id="autoCheck">
+        <option value="off">Desligado</option>
+        <option value="on">Ativado</option>
+      </select>
+      <div class="row" style="margin-top:12px">
+        <button class="btn btn-primary" id="btnAgendarIrr">Agendar</button>
+        <button class="btn btn-outline" id="btnSimular">Simular</button>
+      </div>
+      <div class="row">
+        <div class="col">
+          <div class="small">Umidade</div>
+          <div id="umidadeVal" style="font-weight:600;font-size:18px">--%</div>
+        </div>
+        <div class="col">
+          <div class="small">Previsão</div>
+          <div id="previsaoVal" style="font-weight:600;font-size:18px">--</div>
+        </div>
+      </div>
+      <table id="tabelaIrrigacoes">
+        <thead>
+          <tr>
+            <th>Cód</th>
+            <th>Data/Hora</th>
+            <th>Setor</th>
+            <th>Duração</th>
+            <th>Status</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+
+    <div class="card">
+      <h2>Colheita</h2>
+      <label>Data</label>
+      <input id="dataColheita" type="date">
+      <label>Quantidade (kg)</label>
+      <input id="qtdColheita" type="number" min="1" value="100">
+      <label>Qualidade</label>
+      <select id="qualidadeColheita">
+        <option>Excelente</option>
+        <option>Boa</option>
+        <option>Regular</option>
+        <option>Ruim</option>
+      </select>
+      <button class="btn btn-primary" id="btnRegistrarColheita">Registrar</button>
+      <table id="tabelaColheitas">
+        <thead>
+          <tr>
+            <th>Cód</th>
+            <th>Data</th>
+            <th>Qtd (kg)</th>
+            <th>Qualidade</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </div>
+</body>
+</html>
