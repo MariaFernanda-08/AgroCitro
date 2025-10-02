@@ -41,5 +41,7 @@ Depois de instalar os pacotes e configurar o projeto:
 - Teste o HTML e CSS no navegador, se tudo está conforme os códigos, o layout, imagens e recursos são carregador normalmente.
 - Se todos os itens acima estiverem certos, seu programa está funcionando! 
 
+---
 
-**&copy; Feito por: Cauã Cestari, Lara Tsuji, Marcos Gregório e Maria Fernanda Bonini.**
+
+**&copy; Feito por: Cauã José Cestari Rocha, Lara Pessoa Tsuji, Marcos Gregório Vieira Rodrigues e Maria Fernanda Tomazelli Bonini.**
